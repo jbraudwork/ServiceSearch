@@ -12,7 +12,7 @@
 <title>Item Details</title>
 </head>
 <body>
-<div ng-app="">
+<div ng-app="itemDetailPage"  ng-controller="dctrl">
 <div class="nav-bar-header">
 <button type="button" ng-click="dctrl.search();" class="detail-button-back-icon"></button>
 <button type="button" ng-click="dctrl.home();" class="detail-button-search-icon"></button>
@@ -32,5 +32,17 @@
 <button type="button" ng-click="dctrl.search();" class="detail-button-search">SEARCH AGAIN</button>
 <button type="button" ng-click="dctrl.home();" class="detail-button-home">BACK TO HOME</button>
 </div>
+    <script>
+		var app = angular.module('itemDetailPage', []);
+		app.controller('dctrl', function($scope) {
+        
+        home: function () {
+            $scope.redirect = function(){
+  				window.location = "#/index.html";
+			}
+        }
+    	
+		});
+	</script>
 </body>
 </html>

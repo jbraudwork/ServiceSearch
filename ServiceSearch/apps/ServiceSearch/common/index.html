@@ -12,31 +12,45 @@
     		<script>window.$ = window.jQuery = WLJQ;</script>
     	</head>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    	<body style="display: none;">
-<div ng-app="">
-<div ng-show="!sctrl.bShowSearch" class="search-transition">
-<button type="button" ng-click="" class="mobile-menu"></button>
+    	<body>
+<div ng-app="ServSearch" ng-controller="sctrl">
+<div ng-show="sctrl.bShowSearch" class="search-transition">
+<button type="button" ng-click="showSearchToggle" class="mobile-menu"></button>
 <div class="logo center"></div>
 <div class="vert-cent center wide search-bar"><input class= "wide" type="text" ng-model="name" placeholder="Type.. Service for a new building"></div>
 </div>
-<div ng-show="sctrl.bShowSearch" class="search-transition">
+<div ng-show="!sctrl.bShowSearch" class="search-transition">
 	<div class="vert-cent center wide search-bar"><input class= "wide" type="text" ng-model="name" placeholder="Type.. Service for a new building"></div>
 	<div class="results-text">RESULTS</div>
 <div class="card-body">
-<div ng-click="hctrl.itemDetail();">
+<div ng-click="sctrl.itemDetail();">
 <div class="card-header truncate">Service for newly constructed building</div>
 <div class="card-paragraph">Since Texas is a deregulated market, you get to choose or switch your Retail Electric Provider based on rates, plans and customer benefits that work for you.  Visit Power to Choose or call Texas Choice at 866-797-4839</div>
 </div>
 <hr/>
 <div class="right">
-<button type="button" ng-click="" class="card-button-serve">Serve New</button>
-<button type="button" ng-click="" class="card-button-con">New Construction</button>
+<button type="button" ng-click="showSearchToggle()" class="card-button-serve">Serve New</button>
+<button type="button" ng-click="showSearchToggle()" class="card-button-con">New Construction</button>
 </div>
 </div>
 </div>
 </div>
-	<script src="js/initOptions.js"></script>
-    		<script src="js/main.js"></script>
-    		<script src="js/messages.js"></script>
-    	</body>
+    <script>
+		var app = angular.module('ServSearch', []);
+		app.controller('sctrl', function($scope) {
+    	$scope.bShowSearch= "true";
+    	
+    	showSearchToggle: function () {
+            $scope.bShowSearch = $scope.bShowSearch;
+        }
+        
+        itemDetail: function () {
+            $scope.redirect = function(){
+  				window.location = "#/itemDetails.html";
+			}
+        }
+    	
+		});
+	</script>
+	</body>
 </html>
