@@ -32,7 +32,7 @@
     height: 202px;
     width: 300px;
     left: 0px;
-    top: 50px;
+    top: 0px;
     position: relative;
     background-image: url("../images/oncorlogo.jpg");
     background-size: contain;
@@ -43,7 +43,7 @@
 
 .search-bar {
     left: 0px;
-    top: 60px;
+    top: 0px;
     vertical-align : middle;
     position: relative;
     margin: 5px 0;	
@@ -55,9 +55,83 @@
     width: 24px;
     left: 0px;
     top: 0px;
+    z-index: 3;
     position: absolute;
     background-image: url("../images/hamburger-menu-icon.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     margin: 5px 0;
+}
+
+.search-transition {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transition:top ease .5s;
+}
+
+.search-transition.ng-hide {
+    top: -100%;
+}
+
+.card-body {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-body hr {
+    width: 90%;
+    margin: 0 auto;
+    border-top-color: rgba(10,10,10,0.1);
+    border-width: 1px 0px 0px 0px;
+}
+
+.card-header {
+	margin:0;
+    padding: 5px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-paragraph {
+	margin:0;
+    padding: 5px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 12px;
+    color: #848484;
+}
+
+.card-button-con {
+	padding: 5px;
+	display:inline-block;
+    background-color: #6495ed;
+    color: #ffffff;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    float: right;
+}
+
+.card-button-serve {
+	padding: 5px;
+	display:inline-block;
+    background-color: #FF7F50;
+    color: #ffffff;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    float: right;
+}
+
+.results-text {
+	margin:0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 10px;
+    color: #848484;
 }
