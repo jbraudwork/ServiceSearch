@@ -11,10 +11,13 @@
     		<link rel="stylesheet" href="css/main.css">
     		<script>window.$ = window.jQuery = WLJQ;</script>
     	</head>
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     	<body style="display: none;">
-    		<!--application UI goes here-->
-    		Hello MobileFirst
-	<input type="submit">
+<div ng-app="">
+<button type="button" ng-click="" class="mobile-menu"></button>
+<div class="logo center"></div>
+<div class="center wide search-bar"><input class= "wide" type="text" ng-model="name" placeholder="Type.. Service for a new building"></div>
+</div>
 	<script src="js/initOptions.js"></script>
     		<script src="js/main.js"></script>
     		<script src="js/messages.js"></script>
