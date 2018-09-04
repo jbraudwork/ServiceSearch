@@ -12,5 +12,9 @@ function wlCommonInit(){
 	 */
 	
 	// Common initialization code goes here
+    var sctrl = this;
+
+    sctrl.bShowSearch = false;
+
 	
 }

@@ -2,7 +2,7 @@
 <html>
     	<head>
     		<meta charset="UTF-8">
-    		<title>ServiceSearch</title>
+    		<title>Service Search</title>
     		<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
     		<!--
     			<link rel="shortcut icon" href="images/favicon.png">
@@ -14,9 +14,24 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     	<body style="display: none;">
 <div ng-app="">
+<div ng-show="!sctrl.bShowSearch" class="search-transition">
 <button type="button" ng-click="" class="mobile-menu"></button>
 <div class="logo center"></div>
 <div class="vert-cent center wide search-bar"><input class= "wide" type="text" ng-model="name" placeholder="Type.. Service for a new building"></div>
+</div>
+<div ng-show="sctrl.bShowSearch" class="search-transition">
+	<div class="vert-cent center wide search-bar"><input class= "wide" type="text" ng-model="name" placeholder="Type.. Service for a new building"></div>
+	<div class="results-text">RESULTS</div>
+<div class="card-body">
+<div class="card-header truncate">Service for newly constructed building</div>
+<div class="card-paragraph">Since Texas is a deregulated market, you get to choose or switch your Retail Electric Provider based on rates, plans and customer benefits that work for you.  Visit Power to Choose or call Texas Choice at 866-797-4839</div>
+<hr/>
+<div class="right">
+<button type="button" ng-click="" class="card-button-serve">Serve New</button>
+<button type="button" ng-click="" class="card-button-con">New Construction</button>
+</div>
+</div>
+</div>
 </div>
 	<script src="js/initOptions.js"></script>
     		<script src="js/main.js"></script>
