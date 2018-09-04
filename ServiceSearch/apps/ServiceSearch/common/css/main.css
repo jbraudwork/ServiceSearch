@@ -1,0 +1,62 @@
+.hidden         { display:none !important; }
+.wide, .wide *  { width: 100%; }
+.flex-wide      { flex-grow: 999; }
+.tall           { height: 100%; }
+.bold, strong   { font-weight: 700; }
+.normal-weight  { font-weight: 400; }
+.italic         { font-style: italic;padding-right: 2px; }
+.lite           { font-weight: 100; }
+.lite h1, .lite h2, .lite h3, .lite h4, .lite strong 
+                { font-weight: 400;}
+.subtext        { font-size: 80%; padding: 0 6px; }
+.aside-text     { font-size: 13px;}
+.right          { float: right; text-align: right; }
+.left           { float: left;  text-align: left; }
+.ab-wrap        { position: relative; }
+.vert-cent      { display: flex; align-items: center;}
+.center         { text-align: center;}
+.capitalize     { text-transform: capitalize;}
+.uppercase      { text-transform: uppercase;}
+.no-flex-grow   { flex-grow: 0 !important; }
+.no-wrap        { white-space: nowrap; }
+.truncate, .truncate *
+                { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.margin-auto    { margin: auto; }
+.inline         { display: inline; }
+.inline-block   { display: inline-block; }
+.clear-margin-padding {margin:0px; padding: 0px;}
+.clear-vert-margin {margin-top: 0px;margin-bottom: 0px;}
+
+.logo {
+    display: block;
+    height: 202px;
+    width: 300px;
+    left: 0px;
+    top: 50px;
+    position: relative;
+    background-image: url("../images/oncorlogo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    margin: 5px 0;
+}
+
+.search-bar {
+    left: 0px;
+    top: 60px;
+    position: relative;
+    margin: 5px 0;	
+}
+
+.mobile-menu {
+	display: block;
+    height: 20px;
+    width: 24px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background-image: url("../images/hamburger-menu-icon.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 5px 0;
+}
