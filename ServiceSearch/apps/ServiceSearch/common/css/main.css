@@ -144,6 +144,8 @@
 .det-header {
 	margin:0;
     padding: 5px;
+	clear:both;
+	position: relative;
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
     font-size: 40px;
@@ -159,25 +161,94 @@
 
 .detail-button-home {
 	padding: 15px 5px;
-	width: 48%;
+	width: 45%;
 	display:inline-block;
     background-color: #00FFFF;
     color: #ffffff;
     font-size: 12px;
     border: none;
     border-radius: 8px;
-	position:relative;
-	margin-top:100%;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
 }
 
 .detail-button-search {
 	padding: 15px 5px;
-	width: 48%;
+	width: 45%;
 	display:inline-block;
     background-color: #D3D3D3;
     font-size: 12px;
     border: none;
     border-radius: 8px;
-	position:relative;
-	margin-top:100%;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+.detail-button-back-icon {
+	display:inline-block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+	top: 0px;
+	right: 0px;
+    background-image: url("../images/back_arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin: 5px 0;
+    float: right;
+}
+
+.detail-button-search-icon {
+	display:inline-block;
+    height: 20px;
+    width: 20px;
+    top: 0px;
+    position: absolute;
+    background-image: url("../images/magnifying_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin: 5px 0;
+    float: left;
+}
+
+.detail-button-share-icon {
+	display: block;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    background-image: url("../images/share_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin: 5px 0;
+    float: left;
+}
+
+.detail-button-plus-icon {
+	display: block;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    background-image: url("../images/plus_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #505050;
+    color: #FFFFFF;
+    margin: 5px 0;
+    float: right;
+}
+
+.nav-bar-header {
+	width:100%;
+    float: right;
+}
+
+.bottom-container {
+	height: 200px;
+	border: solid 1px #000;
+	position: relative;
 }
