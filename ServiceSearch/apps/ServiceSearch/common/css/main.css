@@ -44,6 +44,7 @@
 .search-bar {
     left: 0px;
     top: 60px;
+    vertical-align : middle;
     position: relative;
     margin: 5px 0;	
 }
