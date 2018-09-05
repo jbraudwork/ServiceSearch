@@ -66,12 +66,12 @@
 .search-transition {
     position: absolute;
     width: 100%;
-    right: 0;
-    transition:right ease 1.5s;
+    left: 0;
+    transition:left ease .5s;
 }
 
 .search-transition.ng-hide {
-    right: -100%;
+    left: -100%;
 }
 
 .card-body {
