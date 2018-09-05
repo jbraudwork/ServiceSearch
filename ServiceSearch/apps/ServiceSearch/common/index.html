@@ -2,55 +2,57 @@
 <html>
     	<head>
     		<meta charset="UTF-8">
-    		<title>Service Search</title>
-    		<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-    		<!--
-    			<link rel="shortcut icon" href="images/favicon.png">
-    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
-    		-->
     		<link rel="stylesheet" href="css/main.css">
-    		<script>window.$ = window.jQuery = WLJQ;</script>
+			<script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			<script type="text/javascript">
+			
+			    var app = angular.module('ServSearch',[]);
+			
+			    app.controller('ServController',function($scope){
+			        $scope.IsVisible = false;
+			        $scope.NotVisible = true;
+			
+			        $scope.ShowHide = function(){
+			            $scope.IsVisible = true;
+			            $scope.NotVisible = false;
+			        }
+
+			    	$scope.RedirectDetails = function(){
+  						window.location = "/ServiceSearch/apps/ServiceSearch/common/itemDetails.html";
+			        }
+			        
+			        });
+			</script>
     	</head>
-    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     	<body>
-<div ng-app="ServSearch" ng-controller="sctrl">
-<div ng-show="sctrl.bShowSearch" class="search-transition">
-<button type="button" ng-click="showSearchToggle" class="mobile-menu"></button>
+<div ng-app="ServSearch" ng-controller="ServController" class="wide">
+<div ng-show = "NotVisible" class="search-transition">
+<button type="button" ng-click="" class="mobile-menu"></button>
 <div class="logo center"></div>
-<div class="vert-cent center wide search-bar"><input class= "wide" type="text" ng-model="name" placeholder="Type.. Service for a new building"></div>
+<div class="vert-cent center wide search">
+  <span class="fa fa-search" ng-click="ShowHide()"></span>
+  <input class= "wide" type="text" placeholder="Type.. Service for a new building">
 </div>
-<div ng-show="!sctrl.bShowSearch" class="search-transition">
-	<div class="vert-cent center wide search-bar"><input class= "wide" type="text" ng-model="name" placeholder="Type.. Service for a new building"></div>
-	<div class="results-text">RESULTS</div>
+</div>
+<div ng-show = "IsVisible" class="search-transition">
+<div class="vert-cent center wide search">
+  <span class="fa fa-search" ng-click="ShowHide()"></span>
+  <input class= "wide" type="text" placeholder="Type.. Service for a new building">
+</div>
+<div class="results-text" ng-click="">RESULTS</div>
 <div class="card-body">
-<div ng-click="sctrl.itemDetail();">
+<div ng-click="RedirectDetails()">
 <div class="card-header truncate">Service for newly constructed building</div>
 <div class="card-paragraph">Since Texas is a deregulated market, you get to choose or switch your Retail Electric Provider based on rates, plans and customer benefits that work for you.  Visit Power to Choose or call Texas Choice at 866-797-4839</div>
 </div>
 <hr/>
 <div class="right">
-<button type="button" ng-click="showSearchToggle()" class="card-button-serve">Serve New</button>
-<button type="button" ng-click="showSearchToggle()" class="card-button-con">New Construction</button>
+<button type="button" ng-click="" class="card-button-serve">Serve New</button>
+<button type="button" ng-click="" class="card-button-con">New Construction</button>
 </div>
 </div>
 </div>
 </div>
-    <script>
-		var app = angular.module('ServSearch', []);
-		app.controller('sctrl', function($scope) {
-    	$scope.bShowSearch= "true";
-    	
-    	showSearchToggle: function () {
-            $scope.bShowSearch = $scope.bShowSearch;
-        }
-        
-        itemDetail: function () {
-            $scope.redirect = function(){
-  				window.location = "#/itemDetails.html";
-			}
-        }
-    	
-		});
-	</script>
 	</body>
 </html>
